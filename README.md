@@ -1,4 +1,4 @@
-Name: task-calendar
+task-calendar
 ====
 
 URL: https://task-calendar-f4ce2.firebaseapp.com/
