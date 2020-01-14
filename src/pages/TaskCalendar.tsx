@@ -22,9 +22,9 @@ const TaskCalender: React.FC = () => {
     setStartDate(date);
   }
 
-  const modalSet = (taskId: string) => {
+  const modalSet = (taskId: string, modalOn: boolean) => {
     setTaskId(taskId);
-    setModalOn(!modalOn);
+    setModalOn(modalOn);
   }
 
   useEffect(() => {
@@ -63,14 +63,15 @@ const TaskCalender: React.FC = () => {
     };
   }, [startDate, taskId]);
 
-
   return (
     <TaskIdContext.Provider value={taskId}>
       <div className="content">
         <div className="content_left">
           <div className="content_left_head">
             <span className="content_left_list">List</span>
-            <button className="content_left_add" onClick={ () => modalSet("") }>Add+</button>
+            <button className="content_left_add" onClick={ () => modalSet("", true) }>
+              Add+
+            </button>
           </div>
           {tasks}
         </div>

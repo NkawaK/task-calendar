@@ -25,7 +25,7 @@ const Task: React.FC<Props> = (props) => {
   
   const taskElement = 
     <div className={task.task.complete? "content_left_taskcomp" : "content_left_taskincomp"}
-      onClick={ () => props.modalSet(task.taskId) }
+      onClick={ () => props.modalSet(task.taskId, true) }
     >
       <span className="content_left_taskcomp_dot">・</span>
       <span className="content_left_taskcomp_description"> {task.task.title}</span>

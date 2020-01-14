@@ -67,7 +67,7 @@ const Modal: React.FC<Props> = (props) => {
     db.collection(`users/${userId}/tasks`).doc(`${taskId}`)
       .set(task)
       .then(() => {
-        props.modalSet(null);
+        props.modalSet(null, false);
       });
   }
 
@@ -75,7 +75,7 @@ const Modal: React.FC<Props> = (props) => {
     return (
       <div className="modal">
         <div className="modal_content">
-          <div className="modal_content_close" onClick={ () => props.modalSet("") }>
+          <div className="modal_content_close" onClick={ () => props.modalSet("", false) }>
             <span className="modal_content_close_button">×</span>
           </div>
           <div className="modal_form_area">
