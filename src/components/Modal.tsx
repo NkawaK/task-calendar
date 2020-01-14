@@ -45,7 +45,7 @@ const Modal: React.FC<Props> = (props) => {
         if (doc.exists) {
           setTitle(doc.data().title);
           setDate(new Date(doc.data().date));
-          setComplete(doc.data().complete);
+          setComplete(doc.data().complete.toString());
           setDetail(doc.data().detail);
         }
       });
@@ -56,9 +56,10 @@ const Modal: React.FC<Props> = (props) => {
     if (!taskId) {
       taskId = uuidv4();
     }
+
     const task = {
       title: title? title : "",
-      complete: complete.toLocaleLowerCase() === "true",
+      complete: complete.toLowerCase() === "true",
       date: Moment(date).format("YYYY/MM/DD"),
       detail: detail? detail : ""
     }
