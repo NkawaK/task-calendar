@@ -21,7 +21,7 @@ const Modal: React.FC<Props> = (props) => {
   const [date, setDate] = useState(props.startDate);
   const [detail, setDetail] = useState("");
 
-  const handleChange = (date: Date) => {
+  const handleDateChange = (date: Date) => {
     setDate(date);
   }
 
@@ -71,22 +71,32 @@ const Modal: React.FC<Props> = (props) => {
       });
   }
 
+  const deleteTask = () => {
+    window.confirm("Are you sure delete?");
+    
+    db.collection(`users/${userId}/tasks`).doc(`${taskId}`)
+      .delete()
+      .then(() => {
+        props.modalSet(null, false);
+      });
+  }
+
   if (props.modalOn) {
     return (
       <div className="modal">
         <div className="modal_content">
-          <div className="modal_content_close" onClick={ () => props.modalSet("", false) }>
+          <div className="modal_content_close" onClick={() => props.modalSet("", false)}>
             <span className="modal_content_close_button">×</span>
           </div>
           <div className="modal_form_area">
-            <form className="modal_content_form" onSubmit={ e => setTask(e) }>
+            <form className="modal_content_form" onSubmit={e => setTask(e)}>
               <div className="modal_content_form_title">
                 <label htmlFor="title">Title</label>
                 <input type="text" id="title" value={title} onChange={e => setTitle(e.target.value)}/>
               </div>
               <div>
                 <label htmlFor="complete">Complete</label>
-                <select id="complete" value={complete} onChange={ e => setComplete(e.target.value)}>
+                <select id="complete" value={complete} onChange={e => setComplete(e.target.value)}>
                   <option value="true">Complete</option>
                   <option value="false">Incomplete</option>
                 </select>
@@ -95,15 +105,21 @@ const Modal: React.FC<Props> = (props) => {
                 <label htmlFor="date">Date</label>
                 <DatePicker
                   selected={date}
-                  onChange={handleChange}
+                  onChange={handleDateChange}
                 />
               </div>
               <div className="modal_content_form_details">
                 <label htmlFor="description">Detail</label>
-                <textarea name="description" id="description" value={detail} onChange={e => setDetail(e.target.value)}></textarea>
+                <textarea name="description" id="description" 
+                  value={detail} 
+                  onChange={e => setDetail(e.target.value)}>
+                </textarea>
               </div>
               <div className="modal_button_area">
-                <button className="modal_content_from_button" type="submit">{taskId? "Edit" : "Add"}</button>
+                {taskId? <button className="delete_button" type="button" onClick={deleteTask}>Delete</button> : null}
+                <button className="modal_content_from_button" type="submit">
+                  {taskId? "Edit" : "Add"}
+                </button>
               </div>
             </form>
           </div>
