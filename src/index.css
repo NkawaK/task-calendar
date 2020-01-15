@@ -90,10 +90,10 @@ code {
 
 .signin_head_logo {
   text-align: center;
-  cursor: pointer;
 }
 
 .signin_head_logo img {
+  cursor: pointer;
   height: 80px;
 }
 

@@ -24,8 +24,10 @@ const App: React.FC = () => {
                 <span>e</span>
               </div>
             </span>
-            <figure className="signin_head_logo" onClick={ () => signInWithRedirect() }>
-              <img src={"./btn_google_signin_light_pressed_web@2x.png"} alt="logo" />
+            <figure className="signin_head_logo">
+              <img src={"./btn_google_signin_light_pressed_web@2x.png"} alt="logo"
+                onClick={() => signInWithRedirect()}
+              />
             </figure>
           </div>
         </div>
