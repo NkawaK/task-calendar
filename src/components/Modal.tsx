@@ -72,13 +72,13 @@ const Modal: React.FC<Props> = (props) => {
   }
 
   const deleteTask = () => {
-    window.confirm("Are you sure delete?");
-    
-    db.collection(`users/${userId}/tasks`).doc(`${taskId}`)
-      .delete()
-      .then(() => {
-        props.modalSet(null, false);
-      });
+    if (window.confirm("Are you sure delete?")) {
+      db.collection(`users/${userId}/tasks`).doc(`${taskId}`)
+        .delete()
+        .then(() => {
+          props.modalSet(null, false);
+        });
+    }
   }
 
   if (props.modalOn) {
