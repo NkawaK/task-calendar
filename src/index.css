@@ -140,6 +140,10 @@ code {
   cursor: pointer;
 }
 
+.content_left_taskcomp:hover {
+  background-color: #7cfc00;
+}
+
 .content_left_taskcomp_dot {
   display: inline-block;
   font-weight: bold;
@@ -165,6 +169,10 @@ code {
   margin-bottom: 10px;
   background-color: #e9967a;
   cursor: pointer;
+}
+
+.content_left_taskincomp:hover {
+  background-color: #f08080;
 }
 
 .content_left_taskincomp_check {
@@ -261,8 +269,26 @@ code {
   height: 8%;
 }
 
-.modal_content_from_button {
+.delete_button {
+  position: relative;
+  left: 75%;
   background-color: #f0f8ff;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  height: 100%;
+  width: 12%;
+  cursor: pointer;
+}
+
+.delete_button:hover {
+  background-color: red;
+  color: white;
+}
+
+.modal_content_from_button {
+  background-color: #4169e1;
+  color: white;
   border-radius: 5px;
   font-size: 15px;
   font-weight: bold;
@@ -270,4 +296,9 @@ code {
   height: 100%;
   width: 10%;
   cursor: pointer;
+}
+
+.modal_content_from_button:hover {
+  background-color: #00008b;
+  color: white;
 }
