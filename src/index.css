@@ -127,6 +127,11 @@ code {
   cursor: pointer;
 }
 
+.content_left_add:hover {
+  background-color: #4169e1;
+  color: white;
+}
+
 .content_left_area {
   height: 90%;
   overflow: hidden;
@@ -141,7 +146,8 @@ code {
 }
 
 .content_left_taskcomp:hover {
-  background-color: #7cfc00;
+  background-color: #32cd32;
+  color: white;
 }
 
 .content_left_taskcomp_dot {
@@ -172,7 +178,8 @@ code {
 }
 
 .content_left_taskincomp:hover {
-  background-color: #f08080;
+  background-color: #ff7f50;
+  color: white;
 }
 
 .content_left_taskincomp_check {
