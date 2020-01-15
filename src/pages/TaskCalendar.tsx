@@ -30,6 +30,7 @@ const TaskCalender: React.FC = () => {
   useEffect(() => {
     let mounted = true;
     const fetchTasks = [];
+
     db.collection(`users/${userId}/tasks`)
       .where("date", "==", Moment(startDate).format("YYYY/MM/DD"))
       .get()
@@ -69,7 +70,7 @@ const TaskCalender: React.FC = () => {
         <div className="content_left">
           <div className="content_left_head">
             <span className="content_left_list">List</span>
-            <button className="content_left_add" onClick={ () => modalSet("", true) }>
+            <button className="content_left_add" onClick={() => modalSet("", true)}>
               Add+
             </button>
           </div>
