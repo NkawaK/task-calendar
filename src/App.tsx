@@ -12,7 +12,7 @@ const App: React.FC = () => {
         <div className="signin">
           <div className="signin_head">
             <span className="signin_head_title">
-              SignIn
+              Sign in
             </span>
             <span>
               <div className="google_title">

@@ -37,12 +37,14 @@ code {
 
 .signin {
   border: solid black 1px;
+  border-radius: 5px;
   width: 40%;
   height: 60vh;
   margin: 40px 30% 0px 30%;
 }
 
 .signin_head {
+  border-radius: 5px 5px 0 0;
   background-color: #3cb371;
   height: 15%;
   border-bottom: black solid 1px;
@@ -51,7 +53,7 @@ code {
 .signin_head_title {
   display: block;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 27px;
   color:white;
   padding: 25px 25%;
   text-align: center;
@@ -191,6 +193,7 @@ code {
 .modal_content {
   position: relative;
   border: black solid 1px;
+  border-radius: 5px;
   top: 10%;
   width: 40%;
   height: 60%;
@@ -200,11 +203,9 @@ code {
 }
 
 .modal_content_close {
-  position: relative;
   border: black solid 1px;
   border-top: none;
   border-left: none;
-  border-radius: 2.5%;
   top: 0;
   left: 0;
   width: 35px;
@@ -261,9 +262,12 @@ code {
 }
 
 .modal_content_from_button {
+  background-color: #f0f8ff;
+  border-radius: 5px;
   font-size: 15px;
   font-weight: bold;
   float: right;
   height: 100%;
   width: 10%;
+  cursor: pointer;
 }
