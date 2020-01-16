@@ -301,6 +301,7 @@ code {
   font-weight: bold;
   height: 100%;
   width: 12%;
+  padding: 0 1px;
   cursor: pointer;
 }
 
@@ -318,6 +319,7 @@ code {
   float: right;
   height: 100%;
   width: 10%;
+  padding: 0 1px;
   cursor: pointer;
 }
 
