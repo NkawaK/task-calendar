@@ -74,7 +74,9 @@ const TaskCalender: React.FC = () => {
               Add+
             </button>
           </div>
-          {tasks}
+          <div className="content_left_tasks_area">
+            {tasks}
+          </div>
         </div>
         <div className="content_right">
           <DatePicker

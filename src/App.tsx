@@ -1,8 +1,9 @@
 import React from "react";
 
+import { FirebaseAuth, signInWithRedirect } from "./FirebaseAuth";
 import TaskCalender from "./pages/TaskCalendar";
 import Header from "./components/Header";
-import { FirebaseAuth, signInWithRedirect } from "./FirebaseAuth";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   const NotSignedIn = React.useCallback(() => {
@@ -31,6 +32,7 @@ const App: React.FC = () => {
             </figure>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }, []);
@@ -40,8 +42,9 @@ const App: React.FC = () => {
 
   return (
     <FirebaseAuth NotSignedIn={NotSignedIn} Loading={Loading}>
-      <Header/>
-      <TaskCalender/>
+      <Header />
+      <TaskCalender />
+      <Footer />
     </FirebaseAuth>
   );
 };
