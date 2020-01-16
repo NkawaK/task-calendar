@@ -1,11 +1,24 @@
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-y: hidden;
+  min-width: 1000px;
+  min-height: 100vh;
+  position: relative;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #3cb371;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 
 code {
@@ -100,21 +113,6 @@ code {
   height: 80px;
 }
 
-.footer {
-  position: absolute;
-  top: 96%;
-  background-color: #3cb371;
-  height: 100%;
-  width: 100%;
-  margin-bottom: 0px;
-}
-
-.footer div {
-  padding: 7px 0;
-  text-align: center;
-  color: white;
-}
-
 .content {
   margin: 25px 15% 0px 15%;
   height: 85vh;
@@ -149,7 +147,7 @@ code {
 }
 
 .content_left_tasks_area {
-  height: 95%;
+  height: 90%;
   overflow: scroll;
 }
 
@@ -226,6 +224,8 @@ code {
   border: black solid 1px;
   border-radius: 5px;
   top: 10%;
+  min-width: 540px;
+  min-height: 400px;
   width: 40%;
   height: 60%;
   margin: 0px 30%;
