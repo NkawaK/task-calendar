@@ -44,10 +44,15 @@ export const FirebaseAuth: React.FC<FirebaseAuthProps> = ({
   }
 };
 
-export const signInWithRedirect = () => {
+export const signInWithGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   return firebase.auth().signInWithRedirect(provider);
-};
+}
+
+export const signInWithTwitter = () => {
+  const provider = new firebase.auth.TwitterAuthProvider();
+  return firebase.auth().signInWithRedirect(provider);
+}
 
 export const signOut = () => {
   return firebase.auth().signOut();

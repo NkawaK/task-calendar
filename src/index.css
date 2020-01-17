@@ -54,6 +54,7 @@ code {
   border-radius: 5px;
   width: 40%;
   height: 60vh;
+  min-width: 508px;
   margin: 40px 30% 0px 30%;
 }
 
@@ -104,13 +105,37 @@ code {
   color:#dc143c;
 }
 
-.signin_head_logo {
+.twitter_title {
+  margin-top: 3%;
   text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #1e90ff;
 }
 
-.signin_head_logo img {
+.login_button {
+  background-color: white;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #696969;
+  min-width: 288px;
   cursor: pointer;
-  height: 80px;
+}
+
+.login_button:hover {
+  background-color: #dcdcdc;
+  color: white;
+}
+
+.login_button span {
+  position: relative;
+  top: -15px;
+  left: 24px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .content {
