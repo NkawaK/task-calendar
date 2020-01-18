@@ -179,6 +179,7 @@ code {
 .content_left_taskcomp {
   width: 95%;
   height: 50px;
+  border-radius: 5px;
   margin-bottom: 10px;
   background-color: #90ee90;
   cursor: pointer;
@@ -211,6 +212,7 @@ code {
 .content_left_taskincomp {
   width: 95%;
   height: 50px;
+  border-radius: 5px;
   margin-bottom: 10px;
   background-color: #e9967a;
   cursor: pointer;
