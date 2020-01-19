@@ -27,13 +27,13 @@ const App: React.FC = () => {
               <img src={"./btn_google_light_normal_ios.svg"} alt="logo"/>
               <span>Sign in with Google</span>
             </div>
-            {/*<div className="twitter_title">
+            <div className="twitter_title">
               Twitter
             </div>
             <div className="login_button" onClick={() => signInWithTwitter()}>
               <img src={"./Twitter_Logo_Blue.svg"} alt="logo" width="46px" height="46px"/>
               <span>Sign in with Twitter</span>
-            </div>*/}
+            </div>
           </div>
         </div>
         <Footer />
