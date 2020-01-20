@@ -53,8 +53,9 @@ code {
   border: solid black 1px;
   border-radius: 5px;
   width: 40%;
-  height: 60vh;
+  height: 55vh;
   min-width: 508px;
+  min-height: 466px;
   margin: 40px 30% 0px 30%;
 }
 
