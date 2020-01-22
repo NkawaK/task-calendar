@@ -53,9 +53,9 @@ code {
   border: solid black 1px;
   border-radius: 5px;
   width: 40%;
-  height: 55vh;
+  height: 50vh;
   min-width: 508px;
-  min-height: 466px;
+  min-height: 430px;
   margin: 40px 30% 0px 30%;
 }
 
@@ -253,7 +253,7 @@ code {
   border-radius: 5px;
   top: 10%;
   min-width: 540px;
-  min-height: 400px;
+  min-height: 440px;
   width: 40%;
   height: 60%;
   margin: 0px 30%;
