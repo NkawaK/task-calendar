@@ -96,10 +96,7 @@ const Modal: React.FC<Props> = (props) => {
               </div>
               <div>
                 <label htmlFor="complete">Complete</label>
-                <select id="complete" value={complete} onChange={e => setComplete(e.target.value)}>
-                  <option value="true">Complete</option>
-                  <option value="false">Incomplete</option>
-                </select>
+                <input type="checkbox" id="complete" onClick={e => setComplete(`${!(complete === "true")}`)} checked={complete === "true"}/>
               </div>
               <div className="modal_content_form_date">
                 <label htmlFor="date">Date</label>

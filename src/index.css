@@ -301,6 +301,10 @@ code {
   height: 20px;
 }
 
+.modal_content_form input[type=checkbox] {
+  transform: scale(1.5);
+}
+
 .modal_content_form_details {
   height: 15%;
 }
