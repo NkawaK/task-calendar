@@ -29,7 +29,6 @@ const Modal: React.FC<Props> = (props) => {
     if (!taskId) {
       setTitle("");
       setComplete("false");
-      //props.setStartDate(props.startDate);
       setDetail("");
       return;
     } 
@@ -40,7 +39,6 @@ const Modal: React.FC<Props> = (props) => {
       .then(doc => {
         if (doc.exists) {
           setTitle(doc.data().title);
-          //props.setStartDate(new Date(doc.data().date));
           setComplete(doc.data().complete.toString());
           setDetail(doc.data().detail);
         }
