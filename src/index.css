@@ -248,15 +248,15 @@ code {
 }
 
 .modal_content {
-  position: relative;
+  position: absolute;
   border: black solid 1px;
   border-radius: 5px;
   top: 10%;
   min-width: 540px;
   min-height: 440px;
-  width: 40%;
-  height: 60%;
-  margin: 0px 30%;
+  width: 35%;
+  height: 50%;
+  margin: 0px 17%;
   background-color: rgba(255, 255, 255, 1.0);
   z-index: 1500;
 }
@@ -275,7 +275,7 @@ code {
 }
 
 .modal_content_close_button {
-  position: relative;
+  position: absolute;
   top: -8px;
   left: 6px;
 }
