@@ -88,6 +88,7 @@ const TaskCalender: React.FC = () => {
         <Modal
           modalOn={modalOn}
           startDate={startDate}
+          setStartDate={setStartDate}
           modalSet={modalSet}
         />
       </div>

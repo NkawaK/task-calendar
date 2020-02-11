@@ -9,6 +9,7 @@ import uuidv4 from "uuidv4";
 interface Props {
   modalOn: boolean;
   startDate: Date;
+  setStartDate: Function;
   modalSet: Function;
 }
 
@@ -18,22 +19,17 @@ const Modal: React.FC<Props> = (props) => {
   const { userId } = useContext(FirebaseContext);
   const [title, setTitle] = useState("");
   const [complete, setComplete] = useState("false");
-  const [date, setDate] = useState(props.startDate);
   const [detail, setDetail] = useState("");
 
   const handleDateChange = (date: Date) => {
-    setDate(date);
+    props.setStartDate(date);
   }
-
-  useEffect(() => {
-    setDate(props.startDate);
-  }, [props.startDate]);
 
   useEffect(() => {
     if (!taskId) {
       setTitle("");
       setComplete("false");
-      setDate(date);
+      //props.setStartDate(props.startDate);
       setDetail("");
       return;
     } 
@@ -44,7 +40,7 @@ const Modal: React.FC<Props> = (props) => {
       .then(doc => {
         if (doc.exists) {
           setTitle(doc.data().title);
-          setDate(new Date(doc.data().date));
+          //props.setStartDate(new Date(doc.data().date));
           setComplete(doc.data().complete.toString());
           setDetail(doc.data().detail);
         }
@@ -60,7 +56,7 @@ const Modal: React.FC<Props> = (props) => {
     const task = {
       title: title? title : "",
       complete: complete.toLowerCase() === "true",
-      date: Moment(date).format("YYYY/MM/DD"),
+      date: Moment(props.startDate).format("YYYY/MM/DD"),
       detail: detail? detail : ""
     }
     
@@ -96,12 +92,12 @@ const Modal: React.FC<Props> = (props) => {
               </div>
               <div>
                 <label htmlFor="complete">Complete</label>
-                <input type="checkbox" id="complete" onClick={e => setComplete(`${!(complete === "true")}`)} checked={complete === "true"}/>
+                <input type="checkbox" id="complete" onClick={() => setComplete(`${!(complete === "true")}`)} checked={complete === "true"}/>
               </div>
               <div className="modal_content_form_date">
                 <label htmlFor="date">Date</label>
                 <DatePicker
-                  selected={date}
+                  selected={props.startDate}
                   onChange={handleDateChange}
                 />
               </div>
