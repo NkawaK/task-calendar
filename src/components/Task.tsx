@@ -28,7 +28,9 @@ const Task: React.FC<Props> = (props) => {
       onClick={() => props.modalSet(task.taskId, true)}
     >
       <span className="content_left_taskcomp_dot">・</span>
-      <span className="content_left_taskcomp_description"> {task.task.title}</span>
+      <span className="content_left_taskcomp_description">
+        {(task.task.title.length > 22)? ` ${task.task.title.slice(0, 20)}...` : task.task.title}
+      </span>
       <span className={task.task.complete? "content_left_taskcomp_check" : "content_left_taskincomp_check"}>
         {task.task.complete? "\u2714" : "\u2716"}
       </span>
